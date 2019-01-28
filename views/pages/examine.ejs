@@ -1,0 +1,29 @@
+﻿<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>כאן נתחקר היסטוריה של מטבע</h1>
+            <p>יהיה בסדר ?</p>
+        </div>
+    </main>
+
+	<nav class="navbar navbar-light bg-faded">
+       <form class="form-inline" action="http://localhost:3000/newCurrency" method="get">
+           <input class="form-control mr-sm-2" type="text" placeholder="Search" name="kindOfBatata">
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+</body>
+</html>

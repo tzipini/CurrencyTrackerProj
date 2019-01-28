@@ -1,0 +1,67 @@
+﻿<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container" dir="rtl">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1> כותרת לגבי מהות התצוגה</h1>
+            <p>
+			<%
+	          var date = new Date();
+	         %>
+	        <span> תאריך ושעת עדכון </span>
+	        <span><%= date%></span>
+			</p>
+        </div>
+    </main>
+<article class="jumbotron">
+
+  <table class="table  table-hover">
+  <tr >
+   <th style="text-align: center"> שם מטבע </th>
+   <th style="text-align: center"> שער נוכחי </th>
+  </tr>
+
+    <% for (var prop in quetes ) { %>
+	<tr>
+	<td>
+	 <%=prop %>
+	</td>
+	<td>
+    <%= quetes[prop] %>
+<% } %>
+</td>
+</tr>
+  </table>  
+
+</article>
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Secondary, outline button -->
+<button type="button" class="btn btn-secondary">Secondary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+</body>
+</html>
